@@ -1,0 +1,1051 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Manusia di Bulan — Fakta, Bukti, dan Keruntuhan Konspirasi</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,600;1,8..60,300;1,8..60,400&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --ink: #0d1b2a;
+    --paper: #f4f1eb;
+    --cream: #eae5d8;
+    --gold: #c9a84c;
+    --rust: #7a2e1a;
+    --muted: #5e6e7f;
+    --accent: #1b3a5c;
+    --light-ink: #2a3d50;
+    --rule: #b8c8d8;
+    --silver: #a8bcc8;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-size: 18px;
+    line-height: 1.75;
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  /* MASTHEAD */
+  .masthead {
+    background: var(--ink);
+    color: var(--paper);
+    text-align: center;
+    padding: 12px 20px;
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 11px;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+  }
+
+  /* HERO */
+  .hero {
+    background: var(--ink);
+    color: var(--paper);
+    padding: 60px 20px 80px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse at center, #0a1829 0%, #020810 100%);
+  }
+
+  /* animated stars */
+  .stars {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    overflow: hidden;
+  }
+
+  .star {
+    position: absolute;
+    border-radius: 50%;
+    background: white;
+    animation: twinkle 3s ease-in-out infinite;
+  }
+
+  @keyframes twinkle {
+    0%, 100% { opacity: 0.1; transform: scale(1); }
+    50% { opacity: 0.9; transform: scale(1.4); }
+  }
+
+  /* moon orbit circles */
+  .orbit-rings {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+  }
+
+  .orbit {
+    position: absolute;
+    border-radius: 50%;
+    border: 1px solid rgba(201, 168, 76, 0.12);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: orbit-pulse 5s ease-in-out infinite;
+  }
+
+  .orbit:nth-child(1) { width: 180px; height: 180px; animation-delay: 0s; border-color: rgba(201, 168, 76, 0.35); }
+  .orbit:nth-child(2) { width: 320px; height: 320px; animation-delay: 0.8s; }
+  .orbit:nth-child(3) { width: 480px; height: 480px; animation-delay: 1.6s; }
+  .orbit:nth-child(4) { width: 660px; height: 660px; animation-delay: 2.4s; }
+  .orbit:nth-child(5) { width: 860px; height: 860px; animation-delay: 3.2s; }
+
+  @keyframes orbit-pulse {
+    0%, 100% { opacity: 0.2; transform: translate(-50%, -50%) scale(1); }
+    50% { opacity: 0.6; transform: translate(-50%, -50%) scale(1.015); }
+  }
+
+  /* moon graphic */
+  .moon-graphic {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    background: radial-gradient(circle at 35% 35%, #d4c9a8, #8a7d6a 60%, #4a4035 100%);
+    box-shadow: inset -8px -8px 20px rgba(0,0,0,0.6), 0 0 40px rgba(201,168,76,0.15);
+    pointer-events: none;
+  }
+
+  .hero-content { position: relative; z-index: 2; max-width: 800px; margin: 0 auto; }
+
+  .hero-kicker {
+    font-family: 'Source Serif 4', serif;
+    font-size: 11px;
+    letter-spacing: 0.4em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+  }
+
+  .hero-kicker::before, .hero-kicker::after {
+    content: '';
+    width: 40px;
+    height: 1px;
+    background: var(--gold);
+  }
+
+  .hero-title {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: clamp(52px, 10vw, 96px);
+    font-weight: 900;
+    line-height: 0.95;
+    letter-spacing: -0.02em;
+    margin-bottom: 32px;
+    color: var(--paper);
+  }
+
+  .hero-title em {
+    font-style: italic;
+    color: var(--gold);
+  }
+
+  .hero-subtitle {
+    font-size: clamp(16px, 2.5vw, 22px);
+    font-weight: 300;
+    color: rgba(244, 241, 235, 0.75);
+    max-width: 600px;
+    margin: 0 auto 48px;
+    line-height: 1.6;
+  }
+
+  .hero-meta {
+    font-size: 12px;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: rgba(244, 241, 235, 0.4);
+  }
+
+  /* RULE */
+  .rule-divider {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin: 48px 0;
+    color: var(--rule);
+  }
+
+  .rule-divider::before, .rule-divider::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: var(--rule);
+  }
+
+  .rule-ornament {
+    font-size: 18px;
+    color: var(--gold);
+  }
+
+  /* LAYOUT */
+  .container {
+    max-width: 740px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  .container-wide {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  /* ARTICLE BODY */
+  article {
+    padding: 64px 0 80px;
+  }
+
+  .drop-cap::first-letter {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 5.5em;
+    font-weight: 900;
+    float: left;
+    line-height: 0.78;
+    margin: 0.05em 0.1em 0 0;
+    color: var(--rust);
+  }
+
+  p { margin-bottom: 1.5rem; }
+
+  h2 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: clamp(26px, 4vw, 36px);
+    font-weight: 700;
+    line-height: 1.2;
+    color: var(--ink);
+    margin: 56px 0 24px;
+    padding-top: 40px;
+    border-top: 2px solid var(--ink);
+  }
+
+  h3 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 20px;
+    font-weight: 700;
+    font-style: italic;
+    margin: 32px 0 12px;
+    color: var(--rust);
+  }
+
+  /* PULLQUOTE */
+  .pullquote {
+    background: var(--ink);
+    color: var(--paper);
+    margin: 48px -40px;
+    padding: 48px 56px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .pullquote::before {
+    content: '\201C';
+    font-family: 'Playfair Display', serif;
+    font-size: 160px;
+    color: var(--gold);
+    opacity: 0.2;
+    position: absolute;
+    top: -20px;
+    left: 24px;
+    line-height: 1;
+  }
+
+  .pullquote p {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: clamp(20px, 3vw, 28px);
+    font-style: italic;
+    line-height: 1.45;
+    color: var(--paper);
+    position: relative;
+    z-index: 1;
+    margin-bottom: 16px;
+  }
+
+  .pullquote cite {
+    display: block;
+    font-family: 'Source Serif 4', serif;
+    font-size: 12px;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--gold);
+    font-style: normal;
+  }
+
+  @media (max-width: 600px) {
+    .pullquote { margin: 32px -24px; padding: 36px 28px; }
+  }
+
+  /* FACT BOX */
+  .fact-box {
+    background: var(--cream);
+    border-left: 4px solid var(--gold);
+    padding: 28px 32px;
+    margin: 40px 0;
+  }
+
+  .fact-box h4 {
+    font-family: 'Playfair Display', serif;
+    font-size: 13px;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 16px;
+  }
+
+  .fact-box p {
+    font-size: 15px;
+    margin-bottom: 10px;
+    color: var(--light-ink);
+  }
+
+  .fact-box p:last-of-type { margin-bottom: 0; }
+
+  /* SOURCE LABEL */
+  .source-label {
+    display: inline-block;
+    font-size: 10px;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--muted);
+    border: 1px solid var(--rule);
+    padding: 3px 8px;
+    margin-top: 10px;
+  }
+
+  /* DEBUNK CARDS */
+  .debunk-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+    margin: 48px 0;
+    border: 1px solid var(--rule);
+  }
+
+  @media (max-width: 640px) {
+    .debunk-grid { grid-template-columns: 1fr; }
+    .debunk-card { border-right: none !important; border-bottom: 1px solid var(--rule); }
+    .debunk-card:last-child { border-bottom: none; }
+  }
+
+  .debunk-card {
+    padding: 32px 28px;
+    border-right: 1px solid var(--rule);
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .debunk-card:nth-child(even) { border-right: none; }
+  .debunk-card:nth-last-child(-n+2) { border-bottom: none; }
+
+  @media (max-width: 640px) {
+    .debunk-card:nth-child(even) { border-right: none; }
+    .debunk-card:nth-last-child(-n+2) { border-bottom: 1px solid var(--rule); }
+    .debunk-card:last-child { border-bottom: none; }
+  }
+
+  .debunk-claim {
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--rust);
+    margin-bottom: 8px;
+    font-family: 'Source Serif 4', serif;
+  }
+
+  .debunk-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 17px;
+    font-weight: 700;
+    font-style: italic;
+    color: var(--ink);
+    margin-bottom: 12px;
+    line-height: 1.3;
+  }
+
+  .debunk-text {
+    font-size: 14px;
+    color: var(--muted);
+    line-height: 1.65;
+    margin: 0;
+  }
+
+  /* DATA VIZ - RADIATION */
+  .radiation-viz {
+    margin: 48px 0;
+    background: var(--cream);
+    padding: 36px;
+    border: 1px solid var(--rule);
+  }
+
+  .viz-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 13px;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--muted);
+    text-align: center;
+    margin-bottom: 32px;
+  }
+
+  .rad-bar-wrap { margin-bottom: 18px; }
+
+  .rad-label {
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    color: var(--muted);
+    margin-bottom: 6px;
+    letter-spacing: 0.05em;
+  }
+
+  .rad-label strong { color: var(--ink); }
+
+  .rad-bar-bg {
+    width: 100%;
+    height: 14px;
+    background: #ddd;
+    border-radius: 2px;
+    overflow: hidden;
+  }
+
+  .rad-bar {
+    height: 100%;
+    border-radius: 2px;
+    transition: width 1.2s ease;
+  }
+
+  .rad-bar.safe   { background: #4a9e6a; }
+  .rad-bar.caution { background: var(--gold); }
+  .rad-bar.danger  { background: var(--rust); }
+
+  .rad-note {
+    font-size: 12px;
+    color: var(--muted);
+    text-align: center;
+    margin-top: 20px;
+    font-style: italic;
+  }
+
+  /* THREE PILLARS */
+  .pillars {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0;
+    margin: 48px 0;
+    border: 1px solid var(--rule);
+  }
+
+  @media (max-width: 640px) {
+    .pillars { grid-template-columns: 1fr; }
+    .pillar { border-right: none !important; border-bottom: 1px solid var(--rule); }
+    .pillar:last-child { border-bottom: none; }
+  }
+
+  .pillar {
+    padding: 36px 28px;
+    border-right: 1px solid var(--rule);
+    text-align: center;
+  }
+
+  .pillar:last-child { border-right: none; }
+
+  .pillar-number {
+    font-family: 'Playfair Display', serif;
+    font-size: 48px;
+    font-weight: 900;
+    color: var(--gold);
+    opacity: 0.5;
+    line-height: 1;
+    margin-bottom: 12px;
+  }
+
+  .pillar h4 {
+    font-family: 'Playfair Display', serif;
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--ink);
+    margin-bottom: 12px;
+  }
+
+  .pillar p {
+    font-size: 14px;
+    color: var(--muted);
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  /* COMPARISON TABLE */
+  .comparison {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 40px 0;
+    font-size: 15px;
+  }
+
+  .comparison th {
+    background: var(--ink);
+    color: var(--paper);
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    padding: 16px 20px;
+    text-align: left;
+    letter-spacing: 0.05em;
+  }
+
+  .comparison td {
+    padding: 16px 20px;
+    border-bottom: 1px solid var(--rule);
+    color: var(--light-ink);
+    vertical-align: top;
+  }
+
+  .comparison tr:nth-child(even) td { background: var(--cream); }
+
+  .comparison td:first-child {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-style: italic;
+    color: var(--ink);
+    width: 28%;
+  }
+
+  /* TIMELINE */
+  .timeline {
+    margin: 48px 0;
+    position: relative;
+  }
+
+  .timeline::before {
+    content: '';
+    position: absolute;
+    left: 20px;
+    top: 0; bottom: 0;
+    width: 2px;
+    background: linear-gradient(to bottom, var(--gold), var(--rule));
+  }
+
+  .tl-item {
+    display: flex;
+    gap: 28px;
+    margin-bottom: 32px;
+    position: relative;
+  }
+
+  .tl-dot {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: var(--ink);
+    border: 3px solid var(--gold);
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    font-weight: 700;
+    color: var(--gold);
+    letter-spacing: 0.05em;
+    font-family: 'Source Serif 4', serif;
+    z-index: 1;
+  }
+
+  .tl-body { padding-top: 8px; }
+
+  .tl-date {
+    font-size: 11px;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 4px;
+  }
+
+  .tl-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 17px;
+    font-weight: 700;
+    color: var(--ink);
+    margin-bottom: 6px;
+  }
+
+  .tl-desc {
+    font-size: 14px;
+    color: var(--muted);
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  /* FOOTER */
+  .article-footer {
+    border-top: 2px solid var(--ink);
+    padding: 40px 0 0;
+    margin-top: 64px;
+  }
+
+  .footer-label {
+    font-size: 10px;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 20px;
+  }
+
+  .references {
+    font-size: 13px;
+    color: var(--muted);
+    line-height: 1.8;
+    list-style: none;
+  }
+
+  .references li {
+    margin-bottom: 8px;
+    padding-left: 20px;
+    position: relative;
+  }
+
+  .references li::before {
+    content: '—';
+    position: absolute;
+    left: 0;
+    color: var(--gold);
+  }
+
+  /* PAGE FOOTER */
+  .page-footer {
+    background: var(--ink);
+    color: rgba(244, 241, 235, 0.4);
+    text-align: center;
+    padding: 32px;
+    font-size: 12px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+  }
+
+  /* READING PROGRESS */
+  #progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 3px;
+    background: var(--gold);
+    z-index: 100;
+    width: 0%;
+    transition: width 0.1s linear;
+  }
+
+  /* FADE IN */
+  .fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+  }
+
+  .fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  strong { color: var(--ink); }
+  em { color: var(--rust); font-style: italic; }
+
+  a { color: var(--rust); text-decoration: none; border-bottom: 1px solid currentColor; }
+  a:hover { color: var(--gold); }
+</style>
+</head>
+<body>
+
+<div id="progress"></div>
+
+<!-- MASTHEAD -->
+<div class="masthead">Esai Sains · Astronomi & Sejarah · 2025</div>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="stars" aria-hidden="true" id="starfield"></div>
+  <div class="orbit-rings" aria-hidden="true">
+    <div class="orbit"></div>
+    <div class="orbit"></div>
+    <div class="orbit"></div>
+    <div class="orbit"></div>
+    <div class="orbit"></div>
+  </div>
+  <div class="moon-graphic" aria-hidden="true"></div>
+  <div class="hero-content">
+    <div class="hero-kicker">Analisis Sains & Sejarah</div>
+    <h1 class="hero-title">Manusia<br>di <em>Bulan</em></h1>
+    <p class="hero-subtitle">Enam kali jejak kaki manusia menyentuh permukaan Bulan, tujuh kali manusia berangkat — dan mengapa semua klaim konspirasi tidak tahan terhadap pengujian ilmiah.</p>
+    <div class="hero-meta">Berdasarkan data dari NASA · JAXA · Arizona State University · PNAS</div>
+  </div>
+</header>
+
+<!-- ARTICLE -->
+<main>
+<article>
+<div class="container">
+
+  <div class="rule-divider fade-in"><span class="rule-ornament">◆</span></div>
+
+  <p class="drop-cap fade-in">Ada momen dalam sejarah manusia yang begitu mustahil, begitu melampaui batas imajinasi zamannya, sehingga sebagian orang memilih untuk tidak mempercayainya. Tanggal 20 Juli 1969 adalah salah satunya. Seorang manusia — Neil Armstrong — berdiri di atas bongkahan batu yang selama ribuan tahun hanya bisa dilihat dari kejauhan, sebuah benda langit yang telah menjadi kompas petani, ilham penyair, dan objek ketakjuban universal. Dan ia berdiri di sana.</p>
+
+  <p class="fade-in">Lima puluh enam tahun kemudian, pertanyaan itu masih hidup di beranda media sosial kita: <strong>apakah itu sungguh-sungguh terjadi?</strong> Artikel ini tidak akan menjawab dengan otoritas tunggal. Ia akan meletakkan bukti di atas meja — dari banyak pihak yang tidak saling berkaitan — dan membiarkan metode ilmiah berbicara.</p>
+
+  <div class="rule-divider fade-in"><span class="rule-ornament">◆</span></div>
+
+  <h2 class="fade-in">Enam Pendaratan, Satu Catatan Sejarah</h2>
+
+  <p class="fade-in">Sebelum membahas konspirasi, ada baiknya kita letakkan faktanya terlebih dahulu. Bukan satu, melainkan enam kali manusia mendarat di Bulan dalam rentang tiga tahun. Setiap misi membawa astronot yang berbeda, meneliti lokasi yang berbeda, dan mengumpulkan sampel yang berbeda.</p>
+
+  <div class="timeline fade-in">
+    <div class="tl-item">
+      <div class="tl-dot">1969</div>
+      <div class="tl-body">
+        <div class="tl-date">20 Juli 1969</div>
+        <div class="tl-title">Apollo 11 — Sea of Tranquility</div>
+        <p class="tl-desc">Neil Armstrong dan Buzz Aldrin. Pendaratan pertama manusia. 21,6 kg batuan bulan. Disaksikan 600 juta orang melalui siaran televisi. Michael Collins mengorbit di atas.</p>
+      </div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot">1969</div>
+      <div class="tl-body">
+        <div class="tl-date">19 November 1969</div>
+        <div class="tl-title">Apollo 12 — Ocean of Storms</div>
+        <p class="tl-desc">Pete Conrad dan Alan Bean. Pendaratan presisi di dekat wahana Surveyor 3 yang telah lebih dulu mendarat. Membawa pulang 34,4 kg sampel.</p>
+      </div>
+    </div>
+    <div class="tl-item" style="opacity:0.75;">
+      <div class="tl-dot" style="border-color:#ef5350;color:#ef5350;background:#1a0a08;">🚨</div>
+      <div class="tl-body">
+        <div class="tl-date" style="color:#ef5350;">13 April 1970 — MISI DARURAT</div>
+        <div class="tl-title">Apollo 13 — Gagal Mendarat</div>
+        <p class="tl-desc">Jim Lovell, Jack Swigert, Fred Haise. Ledakan tangki oksigen memaksa pembatalan pendaratan. Ketiga astronot kembali selamat ke Bumi 17 April 1970 menggunakan modul bulan sebagai "sekoci darurat". NASA menyebutnya <em>successful failure.</em></p>
+      </div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot">1971</div>
+      <div class="tl-body">
+        <div class="tl-date">5 Februari 1971</div>
+        <div class="tl-title">Apollo 14 — Fra Mauro</div>
+        <p class="tl-desc">Alan Shepard dan Edgar Mitchell. Misi pertama menggunakan handcart untuk angkut peralatan ilmiah. Membawa pulang 42,9 kg sampel.</p>
+      </div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot">1971</div>
+      <div class="tl-body">
+        <div class="tl-date">30 Juli 1971</div>
+        <div class="tl-title">Apollo 15 — Hadley Rille</div>
+        <p class="tl-desc">David Scott dan James Irwin. Misi pertama menggunakan Lunar Roving Vehicle (mobil bulan). Membawa pulang 77 kg sampel — terbanyak saat itu.</p>
+      </div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot">1972</div>
+      <div class="tl-body">
+        <div class="tl-date">21 April 1972</div>
+        <div class="tl-title">Apollo 16 — Descartes Highlands</div>
+        <p class="tl-desc">John Young dan Charles Duke. Satu-satunya misi mendarat di dataran tinggi bulan. Membawa pulang 95,7 kg sampel batuan.</p>
+      </div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot">1972</div>
+      <div class="tl-body">
+        <div class="tl-date">11–14 Desember 1972</div>
+        <div class="tl-title">Apollo 17 — Taurus–Littrow Valley</div>
+        <p class="tl-desc">Gene Cernan dan Harrison Schmitt. Misi terakhir Apollo. Schmitt adalah satu-satunya geolog yang mendarat di Bulan. Sampel terbanyak: 110,5 kg. Total 6 misi berhasil: <strong>380 kg batuan bulan.</strong></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="rule-divider fade-in"><span class="rule-ornament">◆</span></div>
+
+  <h2 class="fade-in">Membedah Klaim Konspirasi Satu Per Satu</h2>
+
+  <p class="fade-in">Teori konspirasi pendaratan bulan bukan fenomena baru. Bill Kaysing — mantan pegawai perusahaan kontraktor roket — menerbitkan klaim pertamanya pada 1976. Sejak itu, argumen-argumen yang sama terus berputar, diperbarui tampilannya dengan media baru. Berikut adalah evaluasi ilmiah terhadap klaim yang paling sering beredar.</p>
+
+  <div class="debunk-grid fade-in">
+    <div class="debunk-card">
+      <div class="debunk-claim">Klaim Konspirasi #1</div>
+      <div class="debunk-title">"Bendera berkibar — tidak mungkin di ruang hampa!"</div>
+      <p class="debunk-text">Bendera Apollo dipasang batang horizontal di atasnya agar tidak menjuntai. Saat astronot memutar tiang ke tanah, bendera bergoyang — dan karena tanpa hambatan udara, gerakannya berlangsung lebih lama. Justru ini buktinya: di Bumi, bendera akan langsung berhenti.</p>
+    </div>
+    <div class="debunk-card">
+      <div class="debunk-claim">Klaim Konspirasi #2</div>
+      <div class="debunk-title">"Tidak ada bintang di foto — jelas studio!"</div>
+      <p class="debunk-text">Pendaratan dilakukan siang hari lunar. Permukaan Bulan sangat reflektif. Untuk mengekspos objek terang, kamera disetel dengan exposure singkat dan aperture kecil — kondisi yang tidak cukup merekam cahaya bintang yang redup. Prinsip fotografi dasar.</p>
+    </div>
+    <div class="debunk-card">
+      <div class="debunk-claim">Klaim Konspirasi #3</div>
+      <div class="debunk-title">"Bayangan tidak sejajar — ada lampu tambahan!"</div>
+      <p class="debunk-text">Terrain Bulan berkontur. Bayangan yang jatuh pada permukaan miring akan tampak tidak sejajar meski sumber cahayanya tunggal. Selain itu, albedo (pantulan) permukaan Bulan menciptakan pencahayaan sekunder alami. Ini geometri proyeksi, bukan anomali.</p>
+    </div>
+    <div class="debunk-card">
+      <div class="debunk-claim">Klaim Konspirasi #4</div>
+      <div class="debunk-title">"Tidak ada misi ke Bulan lagi — bukti tidak bisa ke sana!"</div>
+      <p class="debunk-text">Misi manusia ke Bulan berhenti karena Perang Dingin mereda dan robot/wahana jauh lebih efisien. Total program Apollo: <strong>~$25,8 miliar USD (kurs 1960-an)</strong>, setara ~$257 miliar nilai 2020. Per misi rata-rata ~$445 juta USD; Apollo 11 saja ~$355 juta USD — tanpa nilai ekonomis langsung.</p>
+    </div>
+  </div>
+
+  <div class="fact-box fade-in">
+    <h4>Klaim Konspirasi #5 — Armstrong &amp; Buzz Aldrin Menolak Sumpah di Atas Alkitab</h4>
+    <p>Konspirator Amerika <strong>Bart Sibrel</strong> mengundang Buzz Aldrin dengan dalih wawancara untuk dokumenter edukasi anak-anak. Sesampainya, Aldrin justru diminta bersumpah di atas Alkitab. Merasa ditipu, ia menolak dan pergi. Ketika Sibrel terus mengejeknya sebagai "pembohong dan pengecut", Aldrin memukul Sibrel. Sementara Neil Armstrong menolak karena ia seorang <strong>agnostik</strong> yang tidak mengakui otoritas kitab suci — bukan karena menyembunyikan sesuatu. Penolakan sumpah atas dasar keyakinan pribadi bukan pengakuan kepalsuan.</p>
+    <span class="source-label">History.com · dokumentasi video Bart Sibrel</span>
+  </div>
+
+  <p class="fade-in">Yang menarik dari semua klaim ini adalah polanya yang konsisten: mengambil satu anomali visual, mengasumsikan kondisi Bumi berlaku di Bulan, lalu menyimpulkan kepalsuan. Metode ini mengabaikan fisika lingkungan yang sangat berbeda antara Bumi dan Bulan.</p>
+
+  <div class="pullquote fade-in">
+    <p>Jika pendaratan di Bulan dipalsukan, itu akan menjadi operasi kebohongan terbesar dan paling rumit dalam sejarah manusia — melibatkan lebih dari 400.000 orang yang semuanya diam selama lebih dari 50 tahun.</p>
+    <cite>Rick Fienberg, PhD — American Astronomical Society</cite>
+  </div>
+
+  <div class="rule-divider fade-in"><span class="rule-ornament">◆</span></div>
+
+  <h2 class="fade-in">Sabuk Van Allen: Bahaya Nyata yang Sudah Dihitung</h2>
+
+  <p class="fade-in">Dari semua klaim konspirasi, argumen radiasi sabuk Van Allen adalah yang paling memiliki dasar ilmiah — dalam artian, kekhawatirannya nyata dan memang pernah dibahas serius oleh para ilmuwan. Bedanya: para ilmuwan menghitungnya, bukan sekadar khawatir. Analoginya mirip merokok: rokok memang beracun, tapi seseorang tidak langsung mati dari satu isapan. Butuh paparan <em>konsisten dan berulang</em> untuk menjadi mematikan. Astronot melintas sabuk Van Allen hanya sekali, dalam waktu singkat, dengan lintasan yang telah diperhitungkan.</p>
+
+  <div class="radiation-viz fade-in" id="radViz">
+    <div class="viz-title">Perbandingan Paparan Radiasi (Skala Logaritmik)</div>
+
+    <div class="rad-bar-wrap">
+      <div class="rad-label"><strong>🟢 Astronot Apollo (rata-rata seluruh misi)</strong><span>0,46 rad</span></div>
+      <div class="rad-bar-bg"><div class="rad-bar safe" id="barApollo" style="width:0%"></div></div>
+    </div>
+
+    <div class="rad-bar-wrap">
+      <div class="rad-label"><strong>🔵 Pemindaian CT Scan (1 kali)</strong><span>~1–2 rad</span></div>
+      <div class="rad-bar-bg"><div class="rad-bar safe" id="barCT" style="width:0%"></div></div>
+    </div>
+
+    <div class="rad-bar-wrap">
+      <div class="rad-label"><strong>🟡 Batas paparan pekerja nuklir per tahun</strong><span>5 rad</span></div>
+      <div class="rad-bar-bg"><div class="rad-bar caution" id="barNuclear" style="width:0%"></div></div>
+    </div>
+
+    <div class="rad-bar-wrap">
+      <div class="rad-label"><strong>🔴 Batas bawah radiation sickness</strong><span>~100 rad</span></div>
+      <div class="rad-bar-bg"><div class="rad-bar danger" id="barSick" style="width:0%"></div></div>
+    </div>
+
+    <div class="rad-bar-wrap">
+      <div class="rad-label"><strong>☠️ Dosis mematikan (50% probabilitas)</strong><span>300–500 rad</span></div>
+      <div class="rad-bar-bg"><div class="rad-bar danger" id="barLethal" style="width:0%"></div></div>
+    </div>
+
+    <p class="rad-note">Skala logaritmik: setiap kelipatan 10× = jarak bar yang sama. Astronot Apollo berada jauh di bawah ambang berbahaya. Sumber: NASA · WHO · ICRP</p>
+  </div>
+
+  <p class="fade-in">NASA merancang jalur penerbangan yang meminimalkan waktu di zona paling berbahaya dari sabuk Van Allen. Hasilnya: 0,46 rad — kira-kira setara dengan beberapa pemindaian CT scan. Bukan tidak ada risiko, tapi jauh dari klaim "pasti membunuh astronot".</p>
+
+  <div class="rule-divider fade-in"><span class="rule-ornament">◆</span></div>
+
+  <h2 class="fade-in">Bukti Independen: Yang Tidak Bisa Dipalsukan</h2>
+
+  <p class="fade-in">Argumen paling kuat bukan membantah klaim satu per satu, melainkan menunjukkan bahwa bukti keberhasilan Apollo datang dari institusi-institusi yang sama sekali tidak memiliki kepentingan untuk berbohong demi NASA.</p>
+
+  <div class="pillars fade-in">
+    <div class="pillar">
+      <div class="pillar-number">380</div>
+      <h4>Kilogram Batuan Bulan</h4>
+      <p>Dikumpulkan dari enam misi, dianalisis oleh ratusan laboratorium di seluruh dunia. Berusia hingga 4,5 miliar tahun. Mengandung isotop yang hanya bisa terbentuk tanpa atmosfer dan medan magnet.</p>
+    </div>
+    <div class="pillar">
+      <div class="pillar-number">5</div>
+      <h4>Retroreflektor Aktif</h4>
+      <p>Dipasang Apollo 11, 14, dan 15. Hingga hari ini dipantulkan pulsa laser dari observatorium di berbagai negara untuk mengukur jarak Bumi-Bulan dengan presisi milimeter.</p>
+    </div>
+    <div class="pillar">
+      <div class="pillar-number">6</div>
+      <h4>Foto Orbital JAXA</h4>
+      <p>Wahana SELENE milik Jepang (2008) mengabadikan kawah pendaratan Apollo dari orbit. NASA LRO (2009) memfoto modul, jalur kaki, dan bayangan bendera yang masih berdiri.</p>
+    </div>
+  </div>
+
+  <div class="fact-box fade-in">
+    <h4>Konfirmasi dari Musuh Terketat Amerika</h4>
+    <p><strong>Uni Soviet</strong> memiliki jaringan intelijen, teleskop radio, dan kapasitas teknis terbaik di dunia untuk melacak setiap peluncuran roket Amerika selama Perang Dingin. Mereka melacak seluruh misi Apollo secara real-time di Space Transmissions Corps.</p>
+    <p>Jika ada kebohongan sekecil apapun, Uni Soviet adalah pihak pertama yang akan mengungkapnya ke hadapan dunia — dengan keuntungan propaganda yang sangat besar. Kenyataannya: mereka tidak pernah mempertanyakan keaslian Apollo, bahkan setelah Uni Soviet bubar dan arsip-arsip rahasia terbuka.</p>
+    <span class="source-label">History.com · NASA History Division</span>
+  </div>
+
+  <div class="rule-divider fade-in"><span class="rule-ornament">◆</span></div>
+
+  <h2 class="fade-in">Misi Apollo vs. Klaim Konspirasi: Perbandingan Bukti</h2>
+
+  <table class="comparison fade-in">
+    <thead>
+      <tr>
+        <th>Klaim Konspirasi</th>
+        <th>Bukti Ilmiah</th>
+        <th>Sumber Verifikasi</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Bendera berkibar karena ada angin studio</td>
+        <td>Gerakan terjadi karena aksi mekanis pemasangan tiang; tanpa atmosfer, gerakan berlangsung lebih lama</td>
+        <td>Hukum Newton · Fisika dasar atmosfer</td>
+      </tr>
+      <tr>
+        <td>Tidak ada bintang = syuting di studio</td>
+        <td>Foto diambil siang hari lunar; exposure kamera tidak cukup untuk merekam bintang yang redup</td>
+        <td>Prinsip fotografi; Brian Koberlein, RIT</td>
+      </tr>
+      <tr>
+        <td>Radiasi Van Allen pasti membunuh</td>
+        <td>Astronot terpapar 0,46 rad rata-rata; radiation sickness baru terjadi di ~100 rad; NASA merancang jalur meminimalkan waktu di zona paling berbahaya</td>
+        <td>NASA · WHO · ICRP</td>
+      </tr>
+      <tr>
+        <td>Batu bulan bisa dipalsukan NASA</td>
+        <td>380 kg sampel dianalisis ratusan lab internasional, termasuk ilmuwan Soviet; tidak ada satu pun yang meragukan keasliannya</td>
+        <td>Jurnal geologi peer-reviewed internasional</td>
+      </tr>
+      <tr>
+        <td>Tidak ada misi baru = tidak bisa ke Bulan</td>
+        <td>Biaya per misi ~$445 juta USD (kurs 1960-an) tanpa nilai ekonomis; setelah Perang Dingin berakhir, robot lebih efisien dan murah</td>
+        <td>The Planetary Society · NASA History Division</td>
+      </tr>
+      <tr>
+        <td>Armstrong & Aldrin menolak sumpah = pengakuan bohong</td>
+        <td>Armstrong agnostik, tidak mengakui otoritas kitab suci. Aldrin ditipu Bart Sibrel soal konteks wawancara — menolak karena dimanipulasi, bukan karena menyembunyikan sesuatu</td>
+        <td>History.com · dokumentasi video Bart Sibrel</td>
+      </tr>
+      <tr>
+        <td>NASA satu-satunya sumber "bukti"</td>
+        <td>Foto orbital dari JAXA Jepang (2008) dan NASA LRO (2009); retroreflektor masih aktif bisa dipantulkan siapapun; Uni Soviet tidak pernah membantah</td>
+        <td>JAXA · Arizona State University · LRO</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="rule-divider fade-in"><span class="rule-ornament">◆</span></div>
+
+  <h2 class="fade-in">Mengapa Konspirasi Ini Tetap Hidup?</h2>
+
+  <p class="fade-in">Mematahkan teori konspirasi dengan data saja tidak pernah cukup. Dame Maggie Aderin-Pocock, ilmuwan antariksa dan presenter BBC The Sky at Night, menyebut dimensi yang lebih dalam: <em>"Bagi sebagian orang, keyakinan itu sudah seperti agama, dan sangat sulit diperdebatkan."</em></p>
+
+  <p class="fade-in">Profesor Anu Ojha dari National Space Centre Inggris menambahkan konteks yang penting di era digital: lautan informasi yang membesar setiap harinya membuat lebih mudah bagi narasi apapun — termasuk yang salah — untuk menemukan audiensnya. Konspirasi memberikan sesuatu yang data tidak selalu bisa: rasa memiliki pengetahuan eksklusif.</p>
+
+  <div class="fact-box fade-in">
+    <h4>Psikologi di Balik Kepercayaan Konspirasi</h4>
+    <p>Penelitian dalam <em>Applied Cognitive Psychology</em> menunjukkan bahwa kepercayaan pada satu teori konspirasi cenderung berkorelasi dengan kepercayaan pada teori konspirasi lainnya — bahkan yang saling bertentangan. Ini mengindikasikan bahwa <strong>kecenderungan berpikir konspiratoris</strong> adalah variabel psikologis tersendiri, bukan respons terhadap bukti spesifik.</p>
+    <p>Implikasinya: menyodorkan lebih banyak data tidak selalu mengubah keyakinan. Yang lebih efektif adalah membangun kepercayaan pada proses ilmiah dan institusi yang bisa dipertanggungjawabkan.</p>
+    <span class="source-label">Applied Cognitive Psychology · Brotherton et al., 2013</span>
+  </div>
+
+  <div class="pullquote fade-in">
+    <p>Mereka akan memiliki bukti untuk mengatakan kepada dunia bahwa semuanya palsu. Tapi itu tidak pernah terjadi.</p>
+    <cite>Dame Maggie Aderin-Pocock — Ilmuwan Antariksa, BBC The Sky at Night — merujuk pada Uni Soviet</cite>
+  </div>
+
+  <div class="rule-divider fade-in"><span class="rule-ornament">◆</span></div>
+
+  <h2 class="fade-in">Penutup: Antara Skeptisisme dan Penolakan</h2>
+
+  <p class="fade-in">Skeptisisme adalah jantung dari metode ilmiah. Tanpa keraguan, tidak ada pengujian. Tanpa pengujian, tidak ada pengetahuan. Tapi ada perbedaan mendasar antara <strong>skeptisisme ilmiah</strong> — yang mengikuti bukti ke manapun ia mengarah — dan <strong>penolakan yang disamarkan sebagai skeptisisme</strong> — yang menolak bukti apapun yang tidak sesuai dengan kesimpulan yang telah ditetapkan.</p>
+
+  <p class="fade-in">Pendaratan Apollo telah diuji dengan standar yang ketat, oleh pihak-pihak yang memiliki kepentingan bertentangan, selama lebih dari lima dekade. Batuan Bulan ada di ratusan laboratorium. Retroreflektor masih memantulkan laser. Wahana antariksa Jepang memfoto bekas pendaratannya. Uni Soviet — rival paling kapabel Amerika — tidak pernah mempermasalahkannya.</p>
+
+  <p class="fade-in">Pada akhirnya, mempertanyakan pendaratan bulan bukan sikap kritis yang berani. Ia adalah kepercayaan buta pada narasi yang tidak memiliki bukti, melawan konsensus ilmiah yang didukung oleh bukti berlapis dari seluruh penjuru dunia. Skeptisisme yang sejati akan sampai pada satu kesimpulan: <strong>manusia memang pernah menginjak Bulan.</strong></p>
+
+  <div class="article-footer fade-in">
+    <div class="footer-label">Referensi Utama</div>
+    <ul class="references">
+      <li>NASA History Division. (2019). <em>Apollo: Where No Man Has Gone Before.</em> SP-4214. Washington, D.C.</li>
+      <li>JAXA SELENE Mission Team. (2008). Terrain Camera imagery confirming Apollo 15 landing site. <em>Japan Aerospace Exploration Agency.</em></li>
+      <li>Robinson, M.S. et al. (2012). LROC images of Apollo 11–17 landing sites. <em>Lunar and Planetary Science Conference, Arizona State University.</em></li>
+      <li>Papike, J.J., et al. (1991). Lunar mineralogy. <em>Planetary Sciences: American and Soviet Research.</em> National Academy Press.</li>
+      <li>Aderin-Pocock, M. (2024). Pernyataan ilmiah mengenai keaslian misi Apollo. Dikutip dari <em>The Telegraph.</em></li>
+      <li>Fienberg, R. (n.d.). Konspirasi Apollo dan argumen 400.000 orang. <em>American Astronomical Society.</em></li>
+      <li>Brotherton, R., French, C.C., & Pickering, A.D. (2013). Measuring belief in conspiracy theories: the Generic Conspiracist Beliefs scale. <em>Frontiers in Psychology,</em> 4, 279.</li>
+      <li>International Commission on Radiological Protection (ICRP). (2007). <em>Recommendations of the ICRP.</em> Publication 103. Elsevier.</li>
+      <li>Himastron ITB. (2021). Analisis Pro Kontra Konspirasi Apollo 11. <em>Himpunan Mahasiswa Astronomi ITB,</em> Medium.</li>
+    </ul>
+  </div>
+
+</div>
+</article>
+</main>
+
+<!-- FOOTER -->
+<footer class="page-footer">
+  Esai ini disusun berdasarkan literatur ilmiah dan sumber terverifikasi · Semua klaim dapat diperiksa pada referensi yang tercantum
+</footer>
+
+<script>
+  // Generate random starfield
+  const starfield = document.getElementById('starfield');
+  for (let i = 0; i < 120; i++) {
+    const s = document.createElement('div');
+    s.className = 'star';
+    const size = Math.random() * 2.5 + 0.5;
+    s.style.cssText = `
+      width:${size}px; height:${size}px;
+      left:${Math.random()*100}%;
+      top:${Math.random()*100}%;
+      animation-delay:${Math.random()*4}s;
+      animation-duration:${2+Math.random()*3}s;
+    `;
+    starfield.appendChild(s);
+  }
+
+  // Reading progress
+  window.addEventListener('scroll', () => {
+    const doc = document.documentElement;
+    const scrolled = doc.scrollTop || document.body.scrollTop;
+    const total = doc.scrollHeight - doc.clientHeight;
+    document.getElementById('progress').style.width = (scrolled / total * 100) + '%';
+  });
+
+  // Fade in on scroll
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('visible');
+        observer.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+  document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+  // Animate radiation bars on scroll — skala logaritmik
+  // Range: log10(0.1)=−1 s/d log10(500)=2.699 → total range 3.699
+  // pct(val) = (log10(val) − (−1)) / 3.699 * 100
+  const radViz = document.getElementById('radViz');
+  const radObserver = new IntersectionObserver((entries) => {
+    if (entries[0].isIntersecting) {
+      function logPct(val) {
+        return ((Math.log10(val) + 1) / 3.699 * 100).toFixed(1) + '%';
+      }
+      setTimeout(() => { document.getElementById('barApollo').style.width = logPct(0.46); }, 100);   // 17.9%
+      setTimeout(() => { document.getElementById('barCT').style.width = logPct(1.5); }, 200);         // 27.1%
+      setTimeout(() => { document.getElementById('barNuclear').style.width = logPct(5); }, 300);      // 45.9%
+      setTimeout(() => { document.getElementById('barSick').style.width = logPct(100); }, 400);       // 81.1%
+      setTimeout(() => { document.getElementById('barLethal').style.width = logPct(500); }, 500);     // 100%
+      radObserver.unobserve(radViz);
+    }
+  }, { threshold: 0.3 });
+  radObserver.observe(radViz);
+</script>
+</body>
+</html>
